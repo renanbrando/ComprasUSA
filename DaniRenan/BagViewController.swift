@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  DaniRenan
 //
 //  Created by Renan Ribeiro Brando on 05/10/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class BagViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

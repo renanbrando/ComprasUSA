@@ -28,10 +28,18 @@
                                     <constraint firstAttribute="height" constant="256" id="nBI-n5-shC"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ComprasUSA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMI-AW-aBA">
+                                <rect key="frame" x="105" y="482" width="164.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="1" green="0.36598688153374914" blue="0.22340149663360198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="LMI-AW-aBA" firstAttribute="top" secondItem="OD9-Rz-k51" secondAttribute="bottom" constant="20" id="dPz-jS-lxN"/>
                             <constraint firstItem="OD9-Rz-k51" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eCx-RL-uIw"/>
+                            <constraint firstItem="LMI-AW-aBA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pbG-96-Mfu"/>
                             <constraint firstItem="OD9-Rz-k51" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wCb-IL-tJL"/>
                         </constraints>
                     </view>
