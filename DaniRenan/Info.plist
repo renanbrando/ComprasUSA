@@ -30,6 +30,12 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict/>
+	<key>NSCameraUsageDescription</key>
+	<string>Preciso de permissão para acessar sua câmera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Preciso de permissão para acessar suas fotos</string>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>

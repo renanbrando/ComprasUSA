@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		8312EE4E1F8702A100BBDF2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE4D1F8702A100BBDF2F /* AppDelegate.swift */; };
 		8312EE501F8702A100BBDF2F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE4F1F8702A100BBDF2F /* SettingsViewController.swift */; };
-		8312EE521F8702A100BBDF2F /* BagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE511F8702A100BBDF2F /* BagViewController.swift */; };
 		8312EE551F8702A100BBDF2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8312EE531F8702A100BBDF2F /* Main.storyboard */; };
 		8312EE571F8702A100BBDF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8312EE561F8702A100BBDF2F /* Assets.xcassets */; };
 		8312EE5A1F8702A100BBDF2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8312EE581F8702A100BBDF2F /* LaunchScreen.storyboard */; };
 		8312EE651F8AEC0F00BBDF2F /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE641F8AEC0F00BBDF2F /* WalletViewController.swift */; };
+		8312EE671F91531300BBDF2F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8312EE661F91531300BBDF2F /* Settings.bundle */; };
+		8312EE6A1F9157E500BBDF2F /* ComprasLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE681F9157E400BBDF2F /* ComprasLib.xcdatamodeld */; };
+		8312EE6C1F91630B00BBDF2F /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE6B1F91630B00BBDF2F /* UIViewController+CoreData.swift */; };
+		8312EE6E1F91686B00BBDF2F /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE6D1F91686B00BBDF2F /* ProductsTableViewController.swift */; };
+		8312EE701F9169DE00BBDF2F /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EE6F1F9169DE00BBDF2F /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8312EE4A1F8702A100BBDF2F /* DaniRenan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaniRenan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8312EE4D1F8702A100BBDF2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8312EE4F1F8702A100BBDF2F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		8312EE511F8702A100BBDF2F /* BagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewController.swift; sourceTree = "<group>"; };
 		8312EE541F8702A100BBDF2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8312EE561F8702A100BBDF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8312EE591F8702A100BBDF2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8312EE5B1F8702A100BBDF2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8312EE641F8AEC0F00BBDF2F /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		8312EE661F91531300BBDF2F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8312EE691F9157E500BBDF2F /* ComprasLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComprasLib.xcdatamodel; sourceTree = "<group>"; };
+		8312EE6B1F91630B00BBDF2F /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
+		8312EE6D1F91686B00BBDF2F /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		8312EE6F1F9169DE00BBDF2F /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,8 @@
 		8312EE411F8702A100BBDF2F = {
 			isa = PBXGroup;
 			children = (
+				8312EE681F9157E400BBDF2F /* ComprasLib.xcdatamodeld */,
+				8312EE661F91531300BBDF2F /* Settings.bundle */,
 				8312EE4C1F8702A100BBDF2F /* DaniRenan */,
 				8312EE4B1F8702A100BBDF2F /* Products */,
 			);
@@ -58,16 +68,50 @@
 		8312EE4C1F8702A100BBDF2F /* DaniRenan */ = {
 			isa = PBXGroup;
 			children = (
+				8312EE741F916A1D00BBDF2F /* Wallet */,
+				8312EE731F916A0C00BBDF2F /* Extensions */,
+				8312EE721F9169F400BBDF2F /* Settings */,
+				8312EE711F9169E300BBDF2F /* Products */,
 				8312EE4D1F8702A100BBDF2F /* AppDelegate.swift */,
-				8312EE4F1F8702A100BBDF2F /* SettingsViewController.swift */,
-				8312EE511F8702A100BBDF2F /* BagViewController.swift */,
-				8312EE641F8AEC0F00BBDF2F /* WalletViewController.swift */,
 				8312EE531F8702A100BBDF2F /* Main.storyboard */,
 				8312EE561F8702A100BBDF2F /* Assets.xcassets */,
 				8312EE581F8702A100BBDF2F /* LaunchScreen.storyboard */,
 				8312EE5B1F8702A100BBDF2F /* Info.plist */,
 			);
 			path = DaniRenan;
+			sourceTree = "<group>";
+		};
+		8312EE711F9169E300BBDF2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8312EE6F1F9169DE00BBDF2F /* ProductTableViewCell.swift */,
+				8312EE6D1F91686B00BBDF2F /* ProductsTableViewController.swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8312EE721F9169F400BBDF2F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8312EE4F1F8702A100BBDF2F /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		8312EE731F916A0C00BBDF2F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8312EE6B1F91630B00BBDF2F /* UIViewController+CoreData.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8312EE741F916A1D00BBDF2F /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				8312EE641F8AEC0F00BBDF2F /* WalletViewController.swift */,
+			);
+			name = Wallet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8312EE671F91531300BBDF2F /* Settings.bundle in Resources */,
 				8312EE5A1F8702A100BBDF2F /* LaunchScreen.storyboard in Resources */,
 				8312EE571F8702A100BBDF2F /* Assets.xcassets in Resources */,
 				8312EE551F8702A100BBDF2F /* Main.storyboard in Resources */,
@@ -143,10 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8312EE521F8702A100BBDF2F /* BagViewController.swift in Sources */,
+				8312EE6E1F91686B00BBDF2F /* ProductsTableViewController.swift in Sources */,
 				8312EE651F8AEC0F00BBDF2F /* WalletViewController.swift in Sources */,
+				8312EE701F9169DE00BBDF2F /* ProductTableViewCell.swift in Sources */,
 				8312EE4E1F8702A100BBDF2F /* AppDelegate.swift in Sources */,
+				8312EE6C1F91630B00BBDF2F /* UIViewController+CoreData.swift in Sources */,
 				8312EE501F8702A100BBDF2F /* SettingsViewController.swift in Sources */,
+				8312EE6A1F9157E500BBDF2F /* ComprasLib.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +365,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8312EE681F9157E400BBDF2F /* ComprasLib.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8312EE691F9157E500BBDF2F /* ComprasLib.xcdatamodel */,
+			);
+			currentVersion = 8312EE691F9157E500BBDF2F /* ComprasLib.xcdatamodel */;
+			path = ComprasLib.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8312EE421F8702A100BBDF2F /* Project object */;
 }

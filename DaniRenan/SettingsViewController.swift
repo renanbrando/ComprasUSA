@@ -10,14 +10,35 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var tfExchange: UITextField!
+    @IBOutlet weak var tfIOF: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tfExchange.text = UserDefaults.standard.string(forKey: "exchange")
+        tfIOF.text = UserDefaults.standard.string(forKey: "iof")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func editExchange(_ sender: Any) {
+       
+        UserDefaults.standard.set(tfExchange.text!, forKey: "exchange")
+    }
+   
+    @IBAction func editIOF(_ sender: Any) {
+        
+        UserDefaults.standard.set(tfIOF.text!, forKey: "iof")
     }
 
 
