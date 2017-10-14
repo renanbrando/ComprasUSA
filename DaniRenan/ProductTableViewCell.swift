@@ -10,6 +10,7 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var ivImage: UIImageView!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbPrice: UILabel!

@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qBo-d8-nez">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="25" sectionFooterHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="qBo-d8-nez">
                                 <rect key="frame" x="0.0" y="261" width="320" height="201"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -76,14 +76,14 @@
                             <constraint firstItem="1Tf-zv-O2E" firstAttribute="top" secondItem="6IP-NZ-1yl" secondAttribute="bottom" constant="34" id="1B1-By-MMa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZlT-iU-gvF" secondAttribute="trailing" constant="5" id="4sG-Ef-Q4g"/>
                             <constraint firstItem="qBo-d8-nez" firstAttribute="top" secondItem="1Tf-zv-O2E" secondAttribute="bottom" constant="16" id="CQs-0z-QNB"/>
-                            <constraint firstItem="qBo-d8-nez" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="FKs-R9-9qn"/>
+                            <constraint firstAttribute="trailing" secondItem="qBo-d8-nez" secondAttribute="trailing" id="FR0-HC-2Np"/>
                             <constraint firstItem="6IP-NZ-1yl" firstAttribute="leading" secondItem="sWh-SX-P4r" secondAttribute="trailing" constant="20" id="G95-ef-HvR"/>
                             <constraint firstItem="SmV-h3-OJ1" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="50" id="GLl-IT-dgc"/>
+                            <constraint firstItem="qBo-d8-nez" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Hai-9P-fId"/>
                             <constraint firstItem="1Tf-zv-O2E" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Ljk-oe-ly5"/>
                             <constraint firstItem="SmV-h3-OJ1" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="5" id="Taw-Re-e3H"/>
                             <constraint firstItem="sWh-SX-P4r" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="5" id="Ucm-Xz-VAd"/>
                             <constraint firstItem="sWh-SX-P4r" firstAttribute="top" secondItem="ZlT-iU-gvF" secondAttribute="bottom" constant="16" id="VVu-Pc-CJD"/>
-                            <constraint firstAttribute="trailing" secondItem="qBo-d8-nez" secondAttribute="trailing" id="drP-xB-wzy"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="a7W-Pn-7ea" secondAttribute="bottom" constant="16" id="hDg-WO-IXG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6IP-NZ-1yl" secondAttribute="trailing" constant="5" id="hK6-NH-dYL"/>
                             <constraint firstItem="ZlT-iU-gvF" firstAttribute="leading" secondItem="SmV-h3-OJ1" secondAttribute="trailing" constant="20" id="hTJ-zY-o5Q"/>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="838" y="-711"/>
+            <point key="canvasLocation" x="836.25" y="-711.97183098591552"/>
         </scene>
         <!--Lista de Compras-->
         <scene sceneID="lRz-U5-wp9">
@@ -285,7 +285,7 @@
         <!--Cadastrar Produto-->
         <scene sceneID="S1D-Sv-Ubc">
             <objects>
-                <viewController id="6jc-RU-leZ" sceneMemberID="viewController">
+                <viewController id="6jc-RU-leZ" customClass="ProductViewController" customModule="DaniRenan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1C0-D0-g13"/>
                         <viewControllerLayoutGuide type="bottom" id="KCE-sn-kFx"/>
@@ -295,7 +295,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="caK-E6-Iie">
-                                <rect key="frame" x="21" y="36" width="278" height="30"/>
+                                <rect key="frame" x="21" y="80" width="278" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GNz-ej-UMa"/>
                                 </constraints>
@@ -304,31 +304,31 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rok-oy-HLd">
-                                <rect key="frame" x="21" y="306" width="148.5" height="30"/>
+                                <rect key="frame" x="21" y="350" width="148.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suJ-at-WpW">
-                                <rect key="frame" x="250" y="306" width="51" height="31"/>
+                                <rect key="frame" x="250" y="350" width="51" height="31"/>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_gift" translatesAutoresizingMaskIntoConstraints="NO" id="e6R-L9-nPi">
-                                <rect key="frame" x="21" y="96" width="278" height="134.5"/>
+                                <rect key="frame" x="21" y="140" width="278" height="134.5"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-Ms-mOd">
-                                <rect key="frame" x="21" y="260" width="218" height="30"/>
+                                <rect key="frame" x="21" y="304" width="218" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRB-Pf-bwN">
-                                <rect key="frame" x="180" y="306" width="60.5" height="21"/>
+                                <rect key="frame" x="180" y="350" width="60.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwj-ia-74I">
-                                <rect key="frame" x="21" y="352" width="278" height="50"/>
+                                <rect key="frame" x="21" y="396" width="278" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="20V-yp-rTL"/>
@@ -337,9 +337,12 @@
                                 <state key="normal" title="CADASTRAR">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerProduct:" destination="6jc-RU-leZ" eventType="touchUpInside" id="Sb6-BZ-77L"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDW-B7-2e2">
-                                <rect key="frame" x="249" y="260.5" width="50" height="22"/>
+                                <rect key="frame" x="249" y="304.5" width="50" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="bai-85-sQA"/>
                                 </constraints>
@@ -378,6 +381,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Cadastrar Produto" id="N9R-rG-nLg"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ivImage" destination="e6R-L9-nPi" id="cAM-Ve-1xn"/>
+                        <outlet property="stCard" destination="suJ-at-WpW" id="pXB-Lp-Dqy"/>
+                        <outlet property="tfName" destination="caK-E6-Iie" id="2ap-pN-GvW"/>
+                        <outlet property="tfState" destination="5aU-Ms-mOd" id="II6-4F-VnR"/>
+                        <outlet property="tfValue" destination="rok-oy-HLd" id="a8L-WB-1Km"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aU-dB-MRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,9 +10,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var tfExchange: UITextField!
     @IBOutlet weak var tfIOF: UITextField!
     
+    // MARK: - Properties
+    var dataSource: [Category] = []
+    var product: Product!
     
     override func viewDidLoad() {
         super.viewDidLoad()
