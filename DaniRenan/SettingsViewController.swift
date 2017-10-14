@@ -77,9 +77,18 @@ class SettingsViewController: UIViewController {
                 textField.text = name
             }
         }
+        
+        alert.addTextField { (textField: UITextField) in
+            textField.placeholder = "Taxa do estado"
+            if let tax = state?.tax {
+                textField.text = "\(tax)"
+            }
+        }
+        
         alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action: UIAlertAction) in
             let state = state ?? State(context: self.context)
             state.name = alert.textFields?.first?.text
+            state.tax = Double((alert.textFields?.last?.text)!)!
             do {
                 try self.context.save()
                 self.loadStates()
