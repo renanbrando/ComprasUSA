@@ -26,6 +26,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="25" sectionFooterHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="qBo-d8-nez">
                                 <rect key="frame" x="0.0" y="261" width="320" height="201"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2UN-dM-Cgo">
+                                        <rect key="frame" x="0.0" y="25" width="320" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2UN-dM-Cgo" id="Qee-hT-a0f">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oQ-dr-1Wa">
+                                                    <rect key="frame" x="20" y="8" width="277" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impostos por Estado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tf-zv-O2E">
                                 <rect key="frame" x="75.5" y="224" width="169" height="21"/>
@@ -69,6 +88,9 @@
                                     <constraint firstAttribute="height" constant="30" id="LOt-At-aes"/>
                                 </constraints>
                                 <state key="normal" title="Adicionar Estado"/>
+                                <connections>
+                                    <action selector="add:" destination="9pv-A4-QxB" eventType="touchUpInside" id="uTf-M5-wJS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,6 +118,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="tableView" destination="qBo-d8-nez" id="HZJ-l4-qfW"/>
                         <outlet property="tfExchange" destination="ZlT-iU-gvF" id="mcO-8X-cPk"/>
                         <outlet property="tfIOF" destination="6IP-NZ-1yl" id="MaE-B0-MbW"/>
                     </connections>
