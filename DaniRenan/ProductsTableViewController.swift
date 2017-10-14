@@ -68,7 +68,7 @@ class ProductsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
         let product = fetchedResultController.object(at: indexPath)
         cell.lbName.text = product.name
-        cell.lbPrice.text = "\(product.value)"
+        cell.lbPrice.text = "U$ \(product.value)"
         if let image = product.image as? UIImage {
             cell.ivImage.image = image
         } else {
