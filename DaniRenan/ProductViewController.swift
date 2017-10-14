@@ -100,8 +100,6 @@ class ProductViewController: UIViewController {
         //em nosso pickerView)
         tfState.text = dataSource[pickerView.selectedRow(inComponent: 0)].name
         
-        //Agora, gravamos esta escolha no UserDefaults
-        UserDefaults.standard.set(tfState.text!, forKey: "name")
         cancel()
     }
     
@@ -153,7 +151,7 @@ class ProductViewController: UIViewController {
             product = Product(context: context)
         }
         product.name = tfName.text!
-        product.states?.name = tfState.text!
+        product.states? = dataSource[pickerView.selectedRow(inComponent: 0)]
         product.value = Double(tfValue.text!)!
         product.card = stCard.isOn
         if smallImage != nil {

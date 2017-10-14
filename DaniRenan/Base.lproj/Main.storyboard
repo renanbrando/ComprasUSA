@@ -261,6 +261,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wallet" image="wallet" selectedImage="wallet" id="mtv-il-Cuz"/>
+                    <connections>
+                        <outlet property="tfAmerican" destination="CfQ-Z3-aJE" id="HoZ-QG-U3R"/>
+                        <outlet property="tfBrazilian" destination="t1E-Hj-V3P" id="0fa-ra-1kY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jp-Pg-1eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,13 +328,13 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rok-oy-HLd">
                                 <rect key="frame" x="21" y="350" width="148.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suJ-at-WpW">
                                 <rect key="frame" x="250" y="350" width="51" height="31"/>
