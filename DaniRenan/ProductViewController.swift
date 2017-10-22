@@ -77,13 +77,6 @@ class ProductViewController: UIViewController {
        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if product == nil {
-            product = Product(context: context)
-        }
-        let vc = segue.destination as! SettingsViewController
-        vc.product = product
-    }
     
     //O método cancel irá esconder o teclado e não irá atribuir a seleção ao textField
     func cancel() {
