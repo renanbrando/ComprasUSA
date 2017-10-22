@@ -63,10 +63,13 @@ class WalletViewController: UIViewController {
             reais += product.value * exchangeTax
             
             if product.card {
-                reais += product.value * iofTax
+                reais += (product.value * iofTax) / 100
             }
             
+            reais += (product.value * (product.states?.tax)!) / 100
+            
         }
+        
         
         tfAmerican.text = String(format: "%.2f", dolars)
         tfBrazilian.text = String(format: "%.2f", reais)

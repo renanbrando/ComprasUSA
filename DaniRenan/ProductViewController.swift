@@ -162,7 +162,7 @@ class ProductViewController: UIViewController {
             alertWithTitle(title: "Erro", message: "Escolha um estado.", ViewController: self, toFocus:tfState)
             return
         } else {
-             product.states? = dataSource[pickerView.selectedRow(inComponent: 0)]
+             product.states = dataSource[pickerView.selectedRow(inComponent: 0)]
         }
         
         if (tfValue.text?.isEmpty)! {

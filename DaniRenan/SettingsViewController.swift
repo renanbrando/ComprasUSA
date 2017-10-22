@@ -102,7 +102,7 @@ class SettingsViewController: UIViewController {
             
             if ((alert.textFields?.first?.text?.isEmpty)! || (alert.textFields?.last?.text?.isEmpty)!){
                 self.alertWithTitle(title: "Erro", message: "Erro ao adicionar o estado", ViewController: self, toFocus: self.tfIOF)
-                return
+                return 
             }
             else {
                 state.name = alert.textFields?.first?.text
