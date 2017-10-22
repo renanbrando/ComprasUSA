@@ -98,13 +98,13 @@ class SettingsViewController: UIViewController {
         }
         
         alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action: UIAlertAction) in
-            let state = state ?? State(context: self.context)
             
             if ((alert.textFields?.first?.text?.isEmpty)! || (alert.textFields?.last?.text?.isEmpty)!){
                 self.alertWithTitle(title: "Erro", message: "Erro ao adicionar o estado", ViewController: self, toFocus: self.tfIOF)
-                return 
+                return
             }
             else {
+                let state = state ?? State(context: self.context)
                 state.name = alert.textFields?.first?.text
                 state.tax = Double((alert.textFields?.last?.text)!)!
                 do {
