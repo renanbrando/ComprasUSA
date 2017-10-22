@@ -91,6 +91,7 @@ class SettingsViewController: UIViewController {
         
         alert.addTextField { (textField: UITextField) in
             textField.placeholder = "Taxa do estado"
+            textField.keyboardType = .decimalPad
             if let tax = state?.tax {
                 textField.text = "\(tax)"
             }
@@ -98,15 +99,23 @@ class SettingsViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action: UIAlertAction) in
             let state = state ?? State(context: self.context)
-            state.name = alert.textFields?.first?.text
-            state.tax = Double((alert.textFields?.last?.text)!)!
-            do {
-                try self.context.save()
-                self.loadStates()
-            } catch {
-                print(error.localizedDescription)
+            
+            if ((alert.textFields?.first?.text?.isEmpty)! || (alert.textFields?.last?.text?.isEmpty)!){
+                self.alertWithTitle(title: "Erro", message: "Erro ao adicionar o estado", ViewController: self, toFocus: self.tfIOF)
+                return
+            }
+            else {
+                state.name = alert.textFields?.first?.text
+                state.tax = Double((alert.textFields?.last?.text)!)!
+                do {
+                    try self.context.save()
+                    self.loadStates()
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
         }))
+        
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
