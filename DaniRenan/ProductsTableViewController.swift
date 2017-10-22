@@ -20,9 +20,10 @@ class ProductsTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 106
         tableView.rowHeight = UITableViewAutomaticDimension
-        label.text = "Sua lista está vazia!"
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        label.text = "Sem produtos"
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .black
         
         loadProducts()
     }
@@ -63,6 +64,7 @@ class ProductsTableViewController: UITableViewController {
             return 0
         }
     }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
