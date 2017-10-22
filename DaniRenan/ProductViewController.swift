@@ -150,9 +150,29 @@ class ProductViewController: UIViewController {
         if product == nil {
             product = Product(context: context)
         }
-        product.name = tfName.text!
-        product.states? = dataSource[pickerView.selectedRow(inComponent: 0)]
-        product.value = Double(tfValue.text!)!
+        
+        if (tfName.text?.isEmpty)! {
+            alertWithTitle(title: "Erro", message: "Digite o nome do produto.", ViewController: self, toFocus:tfName)
+            return
+        } else {
+            product.name = tfName.text
+        }
+        
+        if (tfState.text?.isEmpty)! {
+            alertWithTitle(title: "Erro", message: "Escolha um estado.", ViewController: self, toFocus:tfState)
+            return
+        } else {
+             product.states? = dataSource[pickerView.selectedRow(inComponent: 0)]
+        }
+        
+        if (tfValue.text?.isEmpty)! {
+            alertWithTitle(title: "Erro", message: "Digite um valor para o produto.", ViewController: self, toFocus:tfValue)
+            return
+        } else {
+            product.value = Double(tfValue.text!)!
+        }
+        
+        
         product.card = stCard.isOn
         if smallImage != nil {
             product.image = smallImage
@@ -167,6 +187,15 @@ class ProductViewController: UIViewController {
             nav.popViewController(animated: true)
         }
 
+    }
+    
+    func alertWithTitle(title: String!, message: String, ViewController: UIViewController, toFocus:UITextField) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel,handler: {_ in
+            toFocus.becomeFirstResponder()
+        });
+        alert.addAction(action)
+        ViewController.present(alert, animated: true, completion:nil)
     }
 
     

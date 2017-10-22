@@ -46,13 +46,24 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func editExchange(_ sender: Any) {
-       
-        UserDefaults.standard.set(tfExchange.text!, forKey: "exchange")
+        
+        if (tfExchange.text?.isEmpty)! {
+            alertWithTitle(title: "Erro", message: "Digite uma cotação.", ViewController: self, toFocus:tfExchange)
+            return
+        } else {
+            UserDefaults.standard.set(tfExchange.text, forKey: "exchange")
+        }
     }
    
     @IBAction func editIOF(_ sender: Any) {
         
-        UserDefaults.standard.set(tfIOF.text!, forKey: "iof")
+        if (tfIOF.text?.isEmpty)! {
+            alertWithTitle(title: "Erro", message: "Digite o IOF.", ViewController: self, toFocus:tfIOF)
+            return
+        } else {
+            UserDefaults.standard.set(tfIOF.text, forKey: "iof")
+        }
+        
     }
     
     // MARK: - Methods
@@ -104,6 +115,15 @@ class SettingsViewController: UIViewController {
     @IBAction func add(_ sender: Any) {
         showAlert(type: .add, state: nil)
     }
+    
+    func alertWithTitle(title: String!, message: String, ViewController: UIViewController, toFocus:UITextField) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel,handler: {_ in
+            toFocus.becomeFirstResponder()
+        });
+        alert.addAction(action)
+        ViewController.present(alert, animated: true, completion:nil)
+    }
    
 
 
@@ -143,12 +163,9 @@ extension SettingsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let state = dataSource[indexPath.row]
         cell.textLabel?.text = state.name
+        cell.detailTextLabel?.text = "\(state.tax)"
         cell.accessoryType = .none
-        if product != nil {
-            //if let states = product.states, states.contains(state) {
-              //  cell.accessoryType = .checkmark
-            //}
-        }
+      
         return cell
     }
 
